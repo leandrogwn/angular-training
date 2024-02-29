@@ -1,0 +1,28 @@
+<section>
+  <article>
+    <h3>Aula 10 - Class e Style Binding</h3>
+    <div>
+      Selecione uma classe:
+      <select #classe (change)="(0)">
+        <option value="alert-success">Sucesso</option>
+        <option value="alert-info">Info</option>
+        <option value="alert-warning">Alerta</option>
+        <option value="alert-danger">Erro</option>
+      </select>
+      <br /><br />
+      <div>
+        Usando interpolação
+        <div class="alert {{ classe.value }} alert-dismissible fade show" role="alert">
+          <strong>Exemplo de alerta</strong> o botão de fechar funciona.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        Usando style Binding (Caso selecionado Erro)
+        <div class="alert alert-danger" role="alert" [style.display]="classe.value == 'alert-danger' ? 'block':'none'">
+          Esse Alert somente aparece em caso de erro.
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
