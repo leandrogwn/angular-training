@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { PropertyBindingEInterpolacaoComponent } from './component/property-binding-e-interpolacao/property-binding-e-interpolacao.component';
 import { ClassEStyleBindingComponent } from './component/class-e-style-binding/class-e-style-binding.component';
 import { EventBindingComponent } from './component/event-binding/event-binding.component';
-
+import { ManipulacaoArrayComponent } from './component/manipulacao-array/manipulacao-array.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -14,11 +15,14 @@ import { EventBindingComponent } from './component/event-binding/event-binding.c
     AppComponent,
     PropertyBindingEInterpolacaoComponent,
     ClassEStyleBindingComponent,
-    EventBindingComponent
+    EventBindingComponent,
+    ManipulacaoArrayComponent
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
