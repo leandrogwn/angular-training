@@ -9,6 +9,9 @@ import { EventBindingComponent } from './component/event-binding/event-binding.c
 import { ManipulacaoArrayComponent } from './component/manipulacao-array/manipulacao-array.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TwoWayDataBindingComponent } from './component/two-way-data-binding/two-way-data-binding.component';
+import { InputPropertiesComponent } from './component/input-properties/input-properties.component';
+import { MeuCursoComponent } from './component/meu-curso/meu-curso.component';
+import { OutputPropertyComponent } from './component/output-property/output-property.component';
 
 
 @NgModule({
@@ -18,7 +21,10 @@ import { TwoWayDataBindingComponent } from './component/two-way-data-binding/two
     ClassEStyleBindingComponent,
     EventBindingComponent,
     ManipulacaoArrayComponent,
-    TwoWayDataBindingComponent
+    TwoWayDataBindingComponent,
+    InputPropertiesComponent,
+    MeuCursoComponent,
+    OutputPropertyComponent
   ],
   imports: [
     BrowserModule,

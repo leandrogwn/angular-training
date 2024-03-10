@@ -19,12 +19,21 @@
       Utiliza o Two Way data binding para capturar e replicar o valor as variaveis.<br>
       <input type="text" [(ngModel)]="nome">
       <br><br>
-      <p>Você digitou: {{ nome }}</p>
+      <p><b>Você digitou: {{ nome }}</b></p>
+      
+      
+      Utilizando o Two way data binding com o bjetos <br><br>
+      <p>Meu nome é {{ pessoa.nome }} e tenho {{ pessoa.idade }} anos de idade.</p>
+
+      <input type="text" [(ngModel)]="pessoa.nome">
+      <input type="text" [(ngModel)]="pessoa.idade">
       <br><br>
 
-      Observação: É necessário ter o Forms módule importado no app.module.  
+
+      Observações: <br>É necessário ter o Forms módule importado no app.module.  
       <br>
-      <i>import ... from '@angular/forms';</i>
+      <i>1 - import ... from '@angular/forms';</i><br>
+      <i>2 - Para lembrar a ordem seguir a expressão Banana in box [()]</i>
     </div>
   </article>
 </section>
