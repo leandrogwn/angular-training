@@ -8,6 +8,7 @@ import { ClassEStyleBindingComponent } from './component/class-e-style-binding/c
 import { EventBindingComponent } from './component/event-binding/event-binding.component';
 import { ManipulacaoArrayComponent } from './component/manipulacao-array/manipulacao-array.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TwoWayDataBindingComponent } from './component/two-way-data-binding/two-way-data-binding.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
     PropertyBindingEInterpolacaoComponent,
     ClassEStyleBindingComponent,
     EventBindingComponent,
-    ManipulacaoArrayComponent
+    ManipulacaoArrayComponent,
+    TwoWayDataBindingComponent
     
   ],
   imports: [
