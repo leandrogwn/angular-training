@@ -1,3 +1,26 @@
-<p>
-  two-way-data-binding works!
-</p>
+<section>
+  <article>
+    <h3>
+      Two-way data binding
+    </h3>
+    <div>
+      <input type="text"
+        [value]="nome"
+        (input)="nome = $event.target.value"
+      />
+
+      
+      <!--
+      Esse modelo não funcionou, acredito que tenha algo errado com versões do angular
+      <input type="text"
+        [ngModel]="nome"
+        (ngModelChange)="nome = $event"
+      />
+      -->
+
+      <input type="text" [(ngModel)]="nome">
+
+      <p>Você digitou: {{ nome }}</p>
+    </div>
+  </article>
+</section>
