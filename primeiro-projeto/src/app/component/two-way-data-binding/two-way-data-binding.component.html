@@ -4,23 +4,27 @@
       Two-way data binding
     </h3>
     <div>
+      Utilizando o property para receber o valor vindo do componente e o evento input para replicar o conteúdo.<br>
       <input type="text"
         [value]="nome"
         (input)="nome = $event.target.value"
       />
-
-      
-      <!--
-      Esse modelo não funcionou, acredito que tenha algo errado com versões do angular
+      <br><br>
+      Utilizando a property ngModel para para receber o valor vindo do componente e o evento ngModelChange para replicar conteúdo, o angular realiza abstações no evento.<br>
       <input type="text"
-        [ngModel]="nome"
-        (ngModelChange)="nome = $event"
+      [ngModel]="nome"
+      (ngModelChange)="nome = $event"
       />
-      -->
-
+      <br><br>
+      Utiliza o Two Way data binding para capturar e replicar o valor as variaveis.<br>
       <input type="text" [(ngModel)]="nome">
-
+      <br><br>
       <p>Você digitou: {{ nome }}</p>
+      <br><br>
+
+      Observação: É necessário ter o Forms módule importado no app.module.  
+      <br>
+      <i>import ... from '@angular/forms';</i>
     </div>
   </article>
 </section>
