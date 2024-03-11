@@ -1,0 +1,11 @@
+<section>
+  <article>
+    <h3>ngClass</h3>
+    <i [class.bi-star-fill]="!meuFavorito" [class.bi-star]="meuFavorito" (click)="onClick()"></i>
+    <br>
+    <i class="bi" [ngClass]="{
+      'bi-star-fill': !meuFavorito,
+      'bi-star': meuFavorito
+    }" (click)="onClick()"></i>
+  </article>
+</section>

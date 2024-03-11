@@ -13,6 +13,13 @@ import { InputPropertiesComponent } from './component/input-properties/input-pro
 import { MeuCursoComponent } from './component/meu-curso/meu-curso.component';
 import { OutputPropertyComponent } from './component/output-property/output-property.component';
 import { CicloComponent } from './component/ciclo/ciclo.component';
+import { DiretivaNgifComponent } from './component/diretivas/diretiva-ngif/diretiva-ngif.component';
+import { DiretivaNgswitchComponent } from './component/diretivas/diretiva-ngswitch/diretiva-ngswitch.component';
+import { DiretivaNgforComponent } from './component/diretivas/diretiva-ngfor/diretiva-ngfor.component';
+import { DiretivaNgclassComponent } from './component/diretivas/diretiva-ngclass/diretiva-ngclass.component';
+import { DiretivaNgstyleComponent } from './component/diretivas/diretiva-ngstyle/diretiva-ngstyle.component';
+import { OperadorElvisComponent } from './component/diretivas/operador-elvis/operador-elvis.component';
+import { ExemploNgcontentComponent } from './component/diretivas/exemplo-ngcontent/exemplo-ngcontent.component';
 
 
 @NgModule({
@@ -26,7 +33,14 @@ import { CicloComponent } from './component/ciclo/ciclo.component';
     InputPropertiesComponent,
     MeuCursoComponent,
     OutputPropertyComponent,
-    CicloComponent
+    CicloComponent,
+    DiretivaNgifComponent,
+    DiretivaNgswitchComponent,
+    DiretivaNgforComponent,
+    DiretivaNgclassComponent,
+    DiretivaNgstyleComponent,
+    OperadorElvisComponent,
+    ExemploNgcontentComponent
   ],
   imports: [
     BrowserModule,

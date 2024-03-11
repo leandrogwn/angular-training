@@ -1,0 +1,26 @@
+<section>
+  <article>
+    <h3>*ngIf</h3>
+    <div *ngIf="cursos.length > 0">
+      Lista de cursos aqui.
+    </div>
+    <div *ngIf="cursos.length == 0">
+      Não existem cursos para serem listados.
+    </div>
+    <div *ngIf="!mostrarCursos">
+      Não existem cursos para serem listados.
+    </div>
+    <br>
+    <button (click)="onMostrarCrusos()">Mostrar ou esconder cursos</button>
+
+    <h5>hidden como alternativa</h5>
+    <div [hidden]="!mostrarCursos">
+      Mostrando div com hiden. Essa alternativa não deve ser usada se o foco é segurança. 
+      *ngIf é recomendado para arvores de elemento grande.
+      
+    </div>
+    <div [hidden]="mostrarCursos">
+      Div oculta mas presente no código html.
+    </div>
+  </article>
+</section>

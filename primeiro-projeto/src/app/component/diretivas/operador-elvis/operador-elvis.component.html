@@ -1,0 +1,15 @@
+<section>
+  <article>
+    <h3>Operador elvis (?)</h3>
+    <p>{{ tarefa.desc }}</p>
+    <!-- A linha abaixo implicara em vários erros no console, isso porque no componente o nome é null.
+    <p>{{ tarefa.responsavel.nome }}</p>-->
+    
+    <!-- Primeira forma de resolver-->
+    <p>{{ tarefa.responsavel != null ? tarefa.responsavel.nome : '' }}</p>
+
+    <!-- Segunda e correta utilizando o operador elvis-->
+    <p>{{ tarefa.responsavel?.usuario }}</p>
+    
+  </article>
+</section>

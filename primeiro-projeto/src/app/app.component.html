@@ -11,5 +11,20 @@ Aula 10
 //Aula referete a ciclos
 <app-ciclo [valorInicial]="valor" *ngIf="!deletarCiclo"></app-ciclo>
 <button (click)="mudarValor()">Mudar valor</button>
-<button (click)="destruirCiclo()">Destruir ciclo</button>-->
+<button (click)="destruirCiclo()">Destruir ciclo</button>
 <app-input-properties></app-input-properties>
+<app-diretiva-ngif></app-diretiva-ngif>
+<app-diretiva-ngswitch></app-diretiva-ngswitch>
+<app-diretiva-ngfor></app-diretiva-ngfor>
+<app-diretiva-ngclass></app-diretiva-ngclass>
+<app-diretiva-ngstyle></app-diretiva-ngstyle>
+<app-operador-elvis></app-operador-elvis>-->
+<app-exemplo-ngcontent>
+    <div class="titulo">Título</div>
+    <div class="corpo">
+        Conteúdo passado para o componente através do ngcontent.br<br>
+        Pode também ser passado outro component.
+        <app-diretiva-ngif></app-diretiva-ngif>
+    </div>
+    <div class="corpo"><br>Concatena todas as divs que tenham o mesmo seletor.</div>
+</app-exemplo-ngcontent>
