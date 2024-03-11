@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'contador',
@@ -11,6 +11,8 @@ export class OutputPropertyComponent implements OnInit {
 
   @Input() valor: number = 0;
 
+  @ViewChild('campoInput') campoValorInput: ElementRef;
+
   constructor() { }
 
   ngOnInit() {
@@ -19,11 +21,17 @@ export class OutputPropertyComponent implements OnInit {
   @Output() mudouValor = new EventEmitter();
 
   incrementa(){
-    this.valor ++;
+    //Descobrindo o tipo do elemento e seus eventos no console com o viewchield
+    console.log(this.campoValorInput.nativeElement.value);
+    
+    //alterando para o uso do viewChield
+    //this.valor ++;
+    this.campoValorInput.nativeElement.value++;
     this.mudouValor.emit({novoValor: this.valor})
   }
   decrementa(){
-    this.valor --;
+    //this.valor --;
+    this.campoValorInput.nativeElement.value--;
     this.mudouValor.emit({novoValor: this.valor})
   }
 

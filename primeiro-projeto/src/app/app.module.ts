@@ -12,6 +12,7 @@ import { TwoWayDataBindingComponent } from './component/two-way-data-binding/two
 import { InputPropertiesComponent } from './component/input-properties/input-properties.component';
 import { MeuCursoComponent } from './component/meu-curso/meu-curso.component';
 import { OutputPropertyComponent } from './component/output-property/output-property.component';
+import { CicloComponent } from './component/ciclo/ciclo.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { OutputPropertyComponent } from './component/output-property/output-prop
     TwoWayDataBindingComponent,
     InputPropertiesComponent,
     MeuCursoComponent,
-    OutputPropertyComponent
+    OutputPropertyComponent,
+    CicloComponent
   ],
   imports: [
     BrowserModule,

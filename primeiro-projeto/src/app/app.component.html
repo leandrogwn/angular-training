@@ -6,5 +6,10 @@ Aula 10
 <app-event-binding></app-event-binding>
 //teste map()
 <app-manipulacao-array></app-manipulacao-array>
-<app-two-way-data-binding></app-two-way-data-binding>-->
+<app-two-way-data-binding></app-two-way-data-binding>
+
+//Aula referete a ciclos
+<app-ciclo [valorInicial]="valor" *ngIf="!deletarCiclo"></app-ciclo>
+<button (click)="mudarValor()">Mudar valor</button>
+<button (click)="destruirCiclo()">Destruir ciclo</button>-->
 <app-input-properties></app-input-properties>
