@@ -1,0 +1,26 @@
+<section>
+  <article appFundoAmarelo>
+    <h3>Diretiva personalizada</h3>
+    <button appFundoAmarelo>Botão com fundo amarelo</button>
+    <br>
+    <br>
+    <p appHighlightMouse>
+      Texto com highlight quando passo o mouse.
+    </p>
+    <br>
+    <p [appHighlight]="'red'" [defaultColor]="'grey'">
+      Texto com highlight com cores customizadas.
+    </p>
+    <br>
+    <br>
+    <div *ngIf="mostrarCursos">
+      Lista de cursos aqui.
+    </div>
+    <div *appNgElse="mostrarCursos">
+      Não existem cursos para serem listados.
+    </div>
+    <br>
+    <button (click)="onMostrarCrusos()">Mostrar ou esconder cursos</button>
+
+  </article>
+</section>

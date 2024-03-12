@@ -20,6 +20,11 @@ import { DiretivaNgclassComponent } from './component/diretivas/diretiva-ngclass
 import { DiretivaNgstyleComponent } from './component/diretivas/diretiva-ngstyle/diretiva-ngstyle.component';
 import { OperadorElvisComponent } from './component/diretivas/operador-elvis/operador-elvis.component';
 import { ExemploNgcontentComponent } from './component/diretivas/exemplo-ngcontent/exemplo-ngcontent.component';
+import { FundoAmareloDirective } from './shared/fundo-amarelo.directive';
+import { DiretivasCustomizadasComponent } from './component/diretivas/diretivas-customizadas/diretivas-customizadas.component';
+import { HighlightMouseDirective } from './shared/highlight-mouse.directive';
+import { HighlightDirective } from './shared/highlight.directive';
+import { NgElseDirective } from './shared/ng-else.directive';
 
 
 @NgModule({
@@ -40,7 +45,12 @@ import { ExemploNgcontentComponent } from './component/diretivas/exemplo-ngconte
     DiretivaNgclassComponent,
     DiretivaNgstyleComponent,
     OperadorElvisComponent,
-    ExemploNgcontentComponent
+    ExemploNgcontentComponent,
+    FundoAmareloDirective,
+    DiretivasCustomizadasComponent,
+    HighlightMouseDirective,
+    HighlightDirective,
+    NgElseDirective
   ],
   imports: [
     BrowserModule,
