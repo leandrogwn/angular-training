@@ -1,0 +1,14 @@
+<section>
+  <article>
+    <h3>Criar curso</h3>
+
+    <input type="text" #cursoInput>
+    <br>
+    <button (click)="onAddCurso(cursoInput.value)">Add curso</button>
+    <ul>
+      <li *ngFor="let cursos of curso">
+        {{ cursos }}
+    </li>
+  </ul>
+  </article>
+</section>
