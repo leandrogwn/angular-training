@@ -10,15 +10,18 @@ import { ServiceService } from './service.service';
 export class CursosComponent implements OnInit {
 
   cursos: string[] = [];
-  serviceServices: ServiceService;
+  //serviceServices: ServiceService;
 
   constructor(private _serviceServices: ServiceService) {    
     //this.serviceServices = new ServiceService();
-    this.serviceServices = _serviceServices;
+    //this.serviceServices = _serviceServices;
    }
 
   ngOnInit() {
-    this.cursos = this.serviceServices.getCursos();
+    this.cursos = this._serviceServices.getCursos();
+    ServiceService.emitirCursoCriado.subscribe(
+      curso => this.cursos.push(curso)
+    );
   }
 
 }

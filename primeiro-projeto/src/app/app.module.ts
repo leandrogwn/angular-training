@@ -28,6 +28,8 @@ import { NgElseDirective } from './shared/ng-else.directive';
 import { CriarCursosModule } from './services/criar-curso/criar-cursos.module'
 import { CursosModule } from './services/cursos/cursos.module';
 import { ServiceService } from './services/cursos/service.service';
+import { LogService } from './shared/log.service';
+import { ExemplosPipesComponent } from './pipes/exemplos-pipes/exemplos-pipes.component';
 
 
 @NgModule({
@@ -53,7 +55,8 @@ import { ServiceService } from './services/cursos/service.service';
     DiretivasCustomizadasComponent,
     HighlightMouseDirective,
     HighlightDirective,
-    NgElseDirective
+    NgElseDirective,
+    ExemplosPipesComponent
   ],
   imports: [
     BrowserModule,
@@ -63,6 +66,7 @@ import { ServiceService } from './services/cursos/service.service';
     CursosModule,
     CriarCursosModule
   ],
+  providers: [LogService],
   bootstrap: [AppComponent],
   //providers: [ServiceService]
 })
