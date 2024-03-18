@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,6 +30,8 @@ import { CursosModule } from './services/cursos/cursos.module';
 import { ServiceService } from './services/cursos/service.service';
 import { LogService } from './shared/log.service';
 import { ExemplosPipesComponent } from './pipes/exemplos-pipes/exemplos-pipes.component';
+import { CamesCasePipe } from './pipes/camel-case/cames-case.pipe';
+import { SetingsService } from './services/setings.service';
 
 
 @NgModule({
@@ -56,7 +58,8 @@ import { ExemplosPipesComponent } from './pipes/exemplos-pipes/exemplos-pipes.co
     HighlightMouseDirective,
     HighlightDirective,
     NgElseDirective,
-    ExemplosPipesComponent
+    ExemplosPipesComponent,
+    CamesCasePipe
   ],
   imports: [
     BrowserModule,
@@ -66,7 +69,20 @@ import { ExemplosPipesComponent } from './pipes/exemplos-pipes/exemplos-pipes.co
     CursosModule,
     CriarCursosModule
   ],
-  providers: [LogService],
+  providers: [
+    /*{
+      provide: LOCALE_ID,
+      useValue:'pt-BR'
+    }*/
+    LogService,
+    SetingsService,
+    /*{
+      provide: LOCALE_ID,
+      deps: [SetingsService],
+      useFactory: (setingService) => setingService.getLocale();
+    }*/
+    
+  ],
   bootstrap: [AppComponent],
   //providers: [ServiceService]
 })
